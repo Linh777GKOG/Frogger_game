@@ -152,3 +152,12 @@ function win() {
     document.removeEventListener('keyup', moveFrog);
   }
 }
+startPauseButton.addEventListener('click', () => {
+    if (timerId) {
+        clearInterval(timerId)
+        clearInterval(outcomeTimerId)
+        outcomeTimerId = null
+        timerId = null
+        document.removeEventListener('keyup', moveFrog)
+    } 
+    
