@@ -32,3 +32,12 @@ function moveFrog(e) {
   }
   squares[currentIndex].classList.add('frog');
 }
+
+function autoMoveElements() {
+  currentTime--;
+  timeLeftDisplay.textContent = currentTime;
+  logsLeft.forEach((logLeft) => moveLogLeft(logLeft));
+  logsRight.forEach((logRight) => moveLogRight(logRight));
+  carsLeft.forEach((carLeft) => moveCarLeft(carLeft));
+  carsRight.forEach((carRight) => moveCarRight(carRight));
+}
