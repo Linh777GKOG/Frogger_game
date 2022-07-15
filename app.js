@@ -128,3 +128,11 @@ function moveCarRight(carRight) {
       break;
   }
 }
+
+function lose() {
+    if (
+        squares[currentIndex].classList.contains('c1') ||
+        squares[currentIndex].classList.contains('l4') ||
+        squares[currentIndex].classList.contains('l5') ||
+        currentTime <= 0
+    )}
