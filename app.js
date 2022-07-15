@@ -96,6 +96,7 @@ function moveLogRight(logRight) {
       break;
   }
 }
+
 function moveCarLeft(carLeft) {
   switch (true) {
     case carLeft.classList.contains('c1'):
@@ -112,6 +113,7 @@ function moveCarLeft(carLeft) {
       break;
   }
 }
+
 function moveCarRight(carRight) {
   switch (true) {
     case carRight.classList.contains('c1'):
@@ -152,26 +154,17 @@ function win() {
     document.removeEventListener('keyup', moveFrog);
   }
 }
-startPauseButton.addEventListener('click', () => {
-    if (timerId) {
-        clearInterval(timerId)
-        clearInterval(outcomeTimerId)
-        outcomeTimerId = null
-        timerId = null
-        document.removeEventListener('keyup', moveFrog)
-    } 
 
-    
 startPauseButton.addEventListener('click', () => {
-    if (timerId) {
-        clearInterval(timerId)
-        clearInterval(outcomeTimerId)
-        outcomeTimerId = null
-        timerId = null
-        document.removeEventListener('keyup', moveFrog)
-    } else {
-        timerId = setInterval(autoMoveElements, 1000)
-        outcomeTimerId = setInterval(checkOutComes, 50)
-        document.addEventListener('keyup', moveFrog)
-    }
-})
+  if (timerId) {
+    clearInterval(timerId);
+    clearInterval(outcomeTimerId);
+    outcomeTimerId = null;
+    timerId = null;
+    document.removeEventListener('keyup', moveFrog);
+  } else {
+    timerId = setInterval(autoMoveElements, 1000);
+    outcomeTimerId = setInterval(checkOutComes, 50);
+    document.addEventListener('keyup', moveFrog);
+  }
+});
