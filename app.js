@@ -112,3 +112,19 @@ function moveCarLeft(carLeft) {
       break;
   }
 }
+function moveCarRight(carRight) {
+  switch (true) {
+    case carRight.classList.contains('c1'):
+      carRight.classList.remove('c1');
+      carRight.classList.add('c3');
+      break;
+    case carRight.classList.contains('c2'):
+      carRight.classList.remove('c2');
+      carRight.classList.add('c1');
+      break;
+    case carRight.classList.contains('c3'):
+      carRight.classList.remove('c3');
+      carRight.classList.add('c2');
+      break;
+  }
+}
