@@ -143,3 +143,12 @@ function lose() {
     document.removeEventListener('keyup', moveFrog);
   }
 }
+
+function win() {
+  if (squares[currentIndex].classList.contains('ending-block')) {
+    resultDisplay.textContent = 'You Win!';
+    clearInterval(timerId);
+    clearInterval(outcomeTimerId);
+    document.removeEventListener('keyup', moveFrog);
+  }
+}
