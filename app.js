@@ -96,3 +96,19 @@ function moveLogRight(logRight) {
       break;
   }
 }
+function moveCarLeft(carLeft) {
+  switch (true) {
+    case carLeft.classList.contains('c1'):
+      carLeft.classList.remove('c1');
+      carLeft.classList.add('c2');
+      break;
+    case carLeft.classList.contains('c2'):
+      carLeft.classList.remove('c2');
+      carLeft.classList.add('c3');
+      break;
+    case carLeft.classList.contains('c3'):
+      carLeft.classList.remove('c3');
+      carLeft.classList.add('c1');
+      break;
+  }
+}
